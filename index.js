@@ -20,6 +20,10 @@ app.use(
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the Discord Voice Meme API!');
+});
+
 // Connect MongoDB
 mongoose.connect(URI)
   .then(() => {
