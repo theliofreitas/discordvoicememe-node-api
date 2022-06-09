@@ -24,6 +24,6 @@ app.use(express.json());
 mongoose.connect(URI)
   .then(() => {
     console.log('MongoDB connected!');
-    app.listen(3000);
+    app.listen(process.env.PORT || 3000);
   })
   .catch((err) => console.log(err));
